@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 
 export default function App() {
@@ -13,12 +15,14 @@ export default function App() {
         <Hero />
         <Projects />
         <About />
+        <Skills />
+        <Experience />
         <Contact />
       </main>
 
       <footer className="border-t border-white/10 py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center text-white/60 text-sm">
-          © {new Date().getFullYear()} — Crafted with passion and photons.
+          © {new Date().getFullYear()} — Designed & built by Naman Sinha.
         </div>
       </footer>
     </div>
