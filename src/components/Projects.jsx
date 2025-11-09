@@ -1,4 +1,4 @@
-import { ExternalLink, Layers, Brain, Ticket } from "lucide-react";
+import { ExternalLink, Rocket } from "lucide-react";
 
 const projects = [
   {
@@ -7,7 +7,6 @@ const projects = [
       "A mental health assistant and counselling platform with a resource hub, AI chatbot, and community groups.",
     tags: ["HTML", "CSS", "ReactJS", "JavaScript"],
     link: "https://hpsc.tiiny.site",
-    icon: Brain,
   },
   {
     title: "AI Credit Score Manager",
@@ -15,7 +14,6 @@ const projects = [
       "Estimates creditworthiness from utility bill behavior and delivers an AI‑approved score.",
     tags: ["HTML", "CSS", "ReactJS", "JavaScript"],
     link: "https://creditscore-main.onrender.com",
-    icon: Layers,
   },
   {
     title: "Bus/Train Ticket Booking System",
@@ -23,7 +21,6 @@ const projects = [
       "Smart ticketing with seat management, route search and mock payment integration.",
     tags: ["HTML", "CSS", "ReactJS", "JavaScript"],
     link: "https://booksmmart.netlify.app",
-    icon: Ticket,
   },
   {
     title: "TruthLensAI",
@@ -31,7 +28,6 @@ const projects = [
       "Detects misinformation and provides credibility scores with verified sources.",
     tags: ["HTML", "CSS", "ReactJS", "JavaScript"],
     link: "https://truth-guard-ai-08a116dd.base44.app",
-    icon: Brain,
   },
   {
     title: "Cricscard",
@@ -39,7 +35,6 @@ const projects = [
       "Live cricket and football scores with standings and league points tables.",
     tags: ["HTML", "CSS", "ReactJS", "JavaScript"],
     link: "https://cricscard.netlify.app",
-    icon: Layers,
   },
   {
     title: "Juswipe (Upcoming)",
@@ -47,13 +42,12 @@ const projects = [
       "Personalized news swiping app that learns preferences via left/right gestures across 10+ countries.",
     tags: ["React Native", "Flutter"],
     link: "#",
-    icon: Layers,
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-16 sm:py-18">
+    <section id="projects" className="relative py-12 sm:py-14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">Projects</h2>
         <p className="mt-2 text-white/70 max-w-2xl">
@@ -61,7 +55,7 @@ export default function Projects() {
         </p>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map(({ title, description, tags, link, icon: Icon }) => (
+          {projects.map(({ title, description, tags, link }) => (
             <a
               key={title}
               href={link}
@@ -73,7 +67,7 @@ export default function Projects() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="h-10 w-10 grid place-items-center rounded-md bg-gradient-to-br from-fuchsia-500 to-indigo-500">
-                    {Icon ? <Icon className="h-5 w-5 text-white" /> : null}
+                    <Rocket className="h-5 w-5 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white">{title}</h3>
                 </div>
