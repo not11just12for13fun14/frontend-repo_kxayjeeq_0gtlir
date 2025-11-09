@@ -8,10 +8,28 @@ import Contact from "./components/Contact";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-fuchsia-500 selection:text-white">
+    <div className="min-h-screen relative text-white selection:bg-fuchsia-500 selection:text-white">
+      {/* Cosmic purple-to-black gradient background */}
+      <div className="pointer-events-none fixed inset-0 -z-0 bg-gradient-to-b from-[#1a0028] via-[#0b0014] to-black" />
+      {/* Starfield overlay */}
+      <div
+        className="pointer-events-none fixed inset-0 -z-0 opacity-70"
+        style={{
+          backgroundImage:
+            "radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.7) 50%, transparent 51%)," +
+            "radial-gradient(1.5px 1.5px at 70% 40%, rgba(255,255,255,0.6) 50%, transparent 51%)," +
+            "radial-gradient(1.2px 1.2px at 40% 80%, rgba(255,255,255,0.5) 50%, transparent 51%)," +
+            "radial-gradient(1.8px 1.8px at 85% 75%, rgba(255,255,255,0.7) 50%, transparent 51%)," +
+            "radial-gradient(1px 1px at 15% 65%, rgba(255,255,255,0.5) 50%, transparent 51%)," +
+            "radial-gradient(1.4px 1.4px at 55% 15%, rgba(255,255,255,0.6) 50%, transparent 51%)",
+          backgroundRepeat: "repeat",
+          backgroundSize: "800px 800px",
+        }}
+      />
+
       <Navbar />
 
-      <main>
+      <main className="relative z-10 space-y-10 sm:space-y-14">
         <Hero />
         <Projects />
         <About />
@@ -20,7 +38,7 @@ export default function App() {
         <Contact />
       </main>
 
-      <footer className="border-t border-white/10 py-10">
+      <footer className="relative z-10 border-t border-white/10 py-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center text-white/60 text-sm">
           © {new Date().getFullYear()} — Designed & built by Naman Sinha.
         </div>

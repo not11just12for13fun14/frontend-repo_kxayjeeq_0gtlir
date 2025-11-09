@@ -44,21 +44,26 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24">
+    <section id="skills" className="relative py-16 sm:py-18">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-white">
         <h2 className="text-3xl sm:text-4xl font-bold">Technical Skills</h2>
-        <div className="mt-10 grid gap-6">
+
+        {/* Fixed 5-card layout */}
+        <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-5">
           {skills.map((group) => (
-            <div key={group.group} className="rounded-xl border border-white/10 bg-white/5 p-6">
-              <h3 className="text-xl font-semibold">{group.group}</h3>
-              <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <div
+              key={group.group}
+              className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-sm transition hover:shadow-[0_0_40px_rgba(168,85,247,0.25)] hover:border-fuchsia-500/40"
+            >
+              <h3 className="text-lg font-semibold">{group.group}</h3>
+              <div className="mt-4 grid grid-cols-2 gap-3">
                 {group.items.map((item) => (
                   <div
                     key={item.name}
-                    className="flex flex-col items-center justify-center gap-2 rounded-lg border border-white/10 bg-black/40 p-4 hover:border-fuchsia-500/50 transition"
+                    className="group flex items-center gap-2 rounded-lg border border-white/10 bg-black/40 p-2 hover:border-fuchsia-500/50"
                   >
-                    <img src={item.logo} alt={item.name} className="h-8 w-8 object-contain" />
-                    <span className="text-sm text-white/80">{item.name}</span>
+                    <img src={item.logo} alt={item.name} className="h-6 w-6 object-contain" />
+                    <span className="text-xs text-white/85">{item.name}</span>
                   </div>
                 ))}
               </div>

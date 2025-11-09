@@ -53,21 +53,21 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24">
+    <section id="projects" className="relative py-16 sm:py-18">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl sm:text-4xl font-bold text-white">Projects</h2>
         <p className="mt-2 text-white/70 max-w-2xl">
           Selected work spanning product concepts, AI‑assisted tools, and real‑time interfaces.
         </p>
 
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map(({ title, description, tags, link, icon: Icon }) => (
             <a
               key={title}
               href={link}
               target={link !== "#" ? "_blank" : undefined}
               rel={link !== "#" ? "noreferrer" : undefined}
-              className="group relative rounded-xl border border-white/10 bg-white/5 p-6 hover:border-fuchsia-500/50 hover:bg-white/10 transition overflow-hidden"
+              className="group relative rounded-2xl border border-white/10 bg-white/5 p-6 hover:border-fuchsia-500/50 hover:bg-white/10 transition overflow-hidden backdrop-blur-sm"
             >
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-fuchsia-500/20 blur-2xl group-hover:bg-fuchsia-500/30 transition" />
               <div className="flex items-center justify-between">
